@@ -74,13 +74,13 @@ describe("API", () => {
         userQuote: 11348.35,
       });
     });
-    it("should return Internal Server Error", async () => {
+    it("should return 404 Invalid Request", async () => {
       const reponse = await supertest(app)
         .post("/quotes/1000")
         .send({
           productsId: [1, 2, 3],
         });
-      expect(reponse.status).toBe(500);
+      expect(reponse.status).toBe(404);
     });
   });
 });
