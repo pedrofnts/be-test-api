@@ -26,6 +26,14 @@ describe("API", () => {
       expect(reponse.status).toBe(200);
       expect(reponse.body).toStrictEqual(productsMock.data[0]);
     });
+    it("should return 404 Not Found", async () => {
+      const reponse = await supertest(app).get("/products/1000");
+      expect(reponse.status).toBe(404);
+    });
+    it("should return 500 Internal Server Error", async () => {
+      const reponse = await supertest(app).get("/products/abc");
+      expect(reponse.status).toBe(500);
+    });
   });
   describe("GET /users", () => {
     it("should return 200 OK", async () => {
@@ -39,6 +47,14 @@ describe("API", () => {
       const reponse = await supertest(app).get("/users/1");
       expect(reponse.status).toBe(200);
       expect(reponse.body).toStrictEqual(usersMock.data[0]);
+    });
+    it("should return 404 Not Found", async () => {
+      const reponse = await supertest(app).get("/users/1000");
+      expect(reponse.status).toBe(404);
+    });
+    it("should return 500 Internal Server Error", async () => {
+      const reponse = await supertest(app).get("/users/abc");
+      expect(reponse.status).toBe(500);
     });
   });
   describe("POST /quotes", () => {
@@ -57,6 +73,14 @@ describe("API", () => {
         },
         userQuote: 11348.35,
       });
+    });
+    it("should return Internal Server Error", async () => {
+      const reponse = await supertest(app)
+        .post("/quotes/1000")
+        .send({
+          productsId: [1, 2, 3],
+        });
+      expect(reponse.status).toBe(500);
     });
   });
 });
