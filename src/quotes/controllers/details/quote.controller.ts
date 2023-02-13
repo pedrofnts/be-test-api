@@ -17,8 +17,11 @@ export class QuoteController implements IQuoteController {
       res.status(200).json(quote);
       return;
     } catch (error) {
-      res.status(500).json(error);
+      const err = error as any;
 
+      const response = ErrorHandler.getError(err);
+
+      res.status(response.status).json(response.message);
       return;
     }
   }
