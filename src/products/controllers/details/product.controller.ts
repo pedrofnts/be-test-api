@@ -1,4 +1,5 @@
 import { Request, Response } from "express";
+import { ErrorHandler } from "../../../error-handler/error.handler";
 import { ProductService } from "../../services/details/product.service";
 import { IProductController } from "../product.controller.interface";
 
@@ -12,8 +13,11 @@ export class ProductController implements IProductController {
       res.status(200).json(products);
       return;
     } catch (error) {
-      res.status(500).json(error);
+      const err = error as any;
 
+      const response = ErrorHandler.getError(err);
+
+      res.status(response.status).json(response.message);
       return;
     }
   }
@@ -27,7 +31,11 @@ export class ProductController implements IProductController {
       res.status(200).json(product);
       return;
     } catch (error) {
-      res.status(500).json(error);
+      const err = error as any;
+
+      const response = ErrorHandler.getError(err);
+
+      res.status(response.status).json(response.message);
       return;
     }
   }

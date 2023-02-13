@@ -1,5 +1,5 @@
 import { productsMock } from "../../products/__mocks__/fake.products";
-import { ProductService } from "../services/product.service";
+import { ProductService } from "../services/details/product.service";
 
 export const fakeProductService = {
   findAll() {

@@ -1,4 +1,4 @@
-import { UserService } from "../services/user.service";
+import { UserService } from "../services/details/user.service";
 import { usersMock } from "./fake.users";
 
 export const fakeUserService = {
