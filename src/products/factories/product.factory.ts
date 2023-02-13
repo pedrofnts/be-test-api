@@ -1,6 +1,6 @@
-import { ProductController } from "../controllers/product.controller";
-import { ProductService } from "../services/product.service";
-import { ProductRepository } from "./../repositories/product.repository";
+import { ProductController } from "../controllers/details/product.controller";
+import { ProductRepository } from "../repositories/details/product.repository";
+import { ProductService } from "../services/details/product.service";
 
 function productsFactory() {
   const productRepository = new ProductRepository();

@@ -1,6 +1,7 @@
-import { ProductRepository } from "../repositories/product.repository";
+import { ProductRepository } from "../../repositories/details/product.repository";
+import { IProductService } from "../product.service.interface";
 
-export class ProductService {
+export class ProductService implements IProductService {
   constructor(private readonly repository: ProductRepository) {}
 
   async findAll() {

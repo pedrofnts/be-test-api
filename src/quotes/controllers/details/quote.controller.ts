@@ -1,7 +1,8 @@
 import { Request, Response } from "express";
-import { QuoteService } from "./../services/quote.service";
+import { QuoteService } from "../../services/details/quote.service";
+import { IQuoteController } from "../quote.controller.interface";
 
-export class QuoteController {
+export class QuoteController implements IQuoteController {
   constructor(private readonly QuoteService: QuoteService) {}
 
   async createQuote(req: Request, res: Response) {

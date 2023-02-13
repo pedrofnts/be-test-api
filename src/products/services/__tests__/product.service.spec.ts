@@ -1,6 +1,6 @@
-import { productsMock } from "./../__mocks__/fake.products";
-import { fakeProductRepository } from "../__mocks__/fake.product.repository";
-import { ProductService } from "./product.service";
+import { fakeProductRepository } from "./../../__mocks__/fake.product.repository";
+import { productsMock } from "../../__mocks__/fake.products";
+import { ProductService } from "../details/product.service";
 
 const productService = new ProductService(fakeProductRepository);
 

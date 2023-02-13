@@ -1,5 +1,5 @@
-import { ProductRepository } from "./product.repository";
-import { productsMock } from "../__mocks__/fake.products";
+import { productsMock } from "../../__mocks__/fake.products";
+import { ProductRepository } from "../details/product.repository";
 
 const productRepository = new ProductRepository();
 

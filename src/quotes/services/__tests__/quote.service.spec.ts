@@ -1,9 +1,7 @@
-import { fakeProductService } from "./../../products/__mocks__/fake.product.service";
-import { fakeUserService } from "./../../users/__mocks__/fake.user.service";
-import { usersMock } from "../../users/__mocks__/fake.users";
-import { productsMock } from "../../products/__mocks__/fake.products";
-import { fakeProductsIds } from "../../products/__mocks__/fake.products.ids";
-import { QuoteService } from "./quote.service";
+import { fakeProductsIds } from "./../../../products/__mocks__/fake.products.ids";
+import { fakeProductService } from "../../../products/__mocks__/fake.product.service";
+import { fakeUserService } from "../../../users/__mocks__/fake.user.service";
+import { QuoteService } from "../details/quote.service";
 
 const quoteService = new QuoteService(fakeProductService, fakeUserService);
 

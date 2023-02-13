@@ -1,6 +1,7 @@
-import { UserRepository } from './../repositories/user.repository';
+import { UserRepository } from "../../repositories/details/user.repository";
+import { IUserService } from "./../user.service.interface";
 
-export class UserService {
+export class UserService implements IUserService {
   constructor(private readonly repository: UserRepository) {}
 
   async findAll() {

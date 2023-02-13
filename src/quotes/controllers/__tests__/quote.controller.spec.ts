@@ -1,7 +1,10 @@
-import { QuoteController } from "./quote.controller";
-import { mockRequest, mockResponse } from "../../users/__mocks__/fake.express";
-import { fakeProductsIds } from "../../products/__mocks__/fake.products.ids";
-import { fakeQuoteService } from "../__mocks__/fake.quote.service";
+import { fakeQuoteService } from "./../../__mocks__/fake.quote.service";
+import { fakeProductsIds } from "../../../products/__mocks__/fake.products.ids";
+import {
+  mockRequest,
+  mockResponse,
+} from "../../../users/__mocks__/fake.express";
+import { QuoteController } from "../details/quote.controller";
 
 const quoteController = new QuoteController(fakeQuoteService);
 const req = mockRequest();

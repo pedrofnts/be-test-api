@@ -1,6 +1,7 @@
+import { IProductRepository } from "./../product.repository.interface";
 import axios from "axios";
 
-export class ProductRepository {
+export class ProductRepository implements IProductRepository {
   constructor() {}
 
   async findAll() {
