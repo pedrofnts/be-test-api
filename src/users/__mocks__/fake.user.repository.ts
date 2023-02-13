@@ -1,4 +1,4 @@
-import { UserRepository } from "../repositories/user.repository";
+import { UserRepository } from "../repositories/details/user.repository";
 import { usersMock } from "./fake.users";
 
 export const fakeUserRepository = {
