@@ -1,4 +1,4 @@
-import { ProductRepository } from "./../repositories/product.repository";
+import { ProductRepository } from "../repositories/details/product.repository";
 import { productsMock } from "./fake.products";
 
 export const fakeProductRepository = {
