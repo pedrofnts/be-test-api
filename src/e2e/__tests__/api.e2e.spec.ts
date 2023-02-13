@@ -74,7 +74,7 @@ describe("API", () => {
         userQuote: 11348.35,
       });
     });
-    it("should return 404 Invalid Request", async () => {
+    it("should return 404 Not Found", async () => {
       const reponse = await supertest(app)
         .post("/quotes/1000")
         .send({
