@@ -1,7 +1,10 @@
-import { ProductController } from "./product.controller";
-import { mockRequest, mockResponse } from "../../users/__mocks__/fake.express";
-import { fakeProductService } from "../__mocks__/fake.product.service";
-import { productsMock } from "../__mocks__/fake.products";
+import {
+  mockRequest,
+  mockResponse,
+} from "../../../users/__mocks__/fake.express";
+import { fakeProductService } from "../../__mocks__/fake.product.service";
+import { productsMock } from "../../__mocks__/fake.products";
+import { ProductController } from "../details/product.controller";
 
 const productController = new ProductController(fakeProductService);
 const req = mockRequest();

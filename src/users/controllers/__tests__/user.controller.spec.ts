@@ -1,7 +1,7 @@
-import { fakeUserService } from "../__mocks__/fake.user.service";
-import { usersMock } from "../__mocks__/fake.users";
-import { mockRequest, mockResponse } from "../__mocks__/fake.express";
-import { UserController } from "./user.controller";
+import { UserController } from "../details/user.controller";
+import { fakeUserService } from "../../__mocks__/fake.user.service";
+import { usersMock } from "../../__mocks__/fake.users";
+import { mockRequest, mockResponse } from "../../__mocks__/fake.express";
 
 const userController = new UserController(fakeUserService);
 const req = mockRequest();

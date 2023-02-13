@@ -1,7 +1,8 @@
+import { IUserController } from "./../user.controller.interface";
 import { Request, Response } from "express";
-import { UserService } from "../services/user.service";
+import { UserService } from "../../services/details/user.service";
 
-export class UserController {
+export class UserController implements IUserController {
   constructor(private readonly userService: UserService) {}
 
   async findAll(req: Request, res: Response) {
@@ -21,7 +22,6 @@ export class UserController {
 
     try {
       const user = await this.userService.findById(id);
-
       res.status(200).json(user);
     } catch (error) {
       res.status(500).json(error);

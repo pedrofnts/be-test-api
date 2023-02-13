@@ -1,7 +1,8 @@
 import { Request, Response } from "express";
-import { ProductService } from "../services/product.service";
+import { ProductService } from "../../services/details/product.service";
+import { IProductController } from "../product.controller.interface";
 
-export class ProductController {
+export class ProductController implements IProductController {
   constructor(private readonly ProductService: ProductService) {}
 
   async findAll(req: Request, res: Response) {

@@ -1,7 +1,8 @@
-import { UserService } from "./../../users/services/user.service";
-import { ProductService } from "../../products/services/product.service";
+import { IQuoteService } from "../quote.service.interface";
+import { ProductService } from "../../../products/services/details/product.service";
+import { UserService } from "../../../users/services/details/user.service";
 
-export class QuoteService {
+export class QuoteService implements IQuoteService {
   constructor(
     private readonly productService: ProductService,
     private readonly usersService: UserService

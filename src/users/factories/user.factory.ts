@@ -1,6 +1,6 @@
-import { UserController } from "../controllers/user.controller";
-import { UserRepository } from "../repositories/user.repository";
-import { UserService } from "../services/user.service";
+import { UserController } from "../controllers/details/user.controller";
+import { UserRepository } from "../repositories/details/user.repository";
+import { UserService } from "../services/details/user.service";
 
 function usersFactory() {
   const userRepository = new UserRepository();

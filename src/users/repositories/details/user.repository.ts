@@ -1,6 +1,7 @@
+import { IUserRepository } from "./../user.repository.interface";
 import axios from "axios";
 
-export class UserRepository {
+export class UserRepository implements IUserRepository {
   constructor() {}
 
   async findAll() {
