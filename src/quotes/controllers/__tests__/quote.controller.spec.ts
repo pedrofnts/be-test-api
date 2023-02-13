@@ -13,12 +13,11 @@ const res = mockResponse();
 describe("QuoteController", () => {
   describe("createQuote", () => {
     it("should return an object", async () => {
-      const quote = { id: 1, products: fakeProductsIds, total: 100 };
-      fakeQuoteService.createQuote = jest.fn().mockResolvedValue(quote);
+      fakeQuoteService.createQuote = jest.fn().mockResolvedValue({});
 
       await quoteController.createQuote(req, res);
 
-      expect(res.json).toBeCalledWith(quote);
+      expect(res.json).toBeCalledWith({});
       expect(res.status).toBeCalledWith(200);
     });
     it("should return error", async () => {
