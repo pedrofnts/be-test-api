@@ -4,7 +4,7 @@ Esse é o repositório para da aplicação Be Test. Foi criado um middleware par
 
 ## Documentação da API
 
-[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/21642696-1bcbfd72-1b31-4c84-8922-ceffa6d49a2c?action=collection%2Ffork&collection-url=entityId%3D21642696-1bcbfd72-1b31-4c84-8922-ceffa6d49a2c%26entityType%3Dcollection%26workspaceId%3D7845280a-058d-45eb-be58-c1bc0cd9c854)
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://documenter.getpostman.com/view/21642696/2s935uG1Cb)
 
 ## Tecnologias utilizadas
 
