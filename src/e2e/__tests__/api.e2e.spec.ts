@@ -71,7 +71,7 @@ describe("API", () => {
           name: "cvRhuZicvV",
           tax: 79,
         },
-        userQuote: 11348.35,
+        userQuote: "11348.35",
       });
     });
     it("should return 404 Not Found", async () => {
