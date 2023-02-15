@@ -11,7 +11,7 @@ const result = {
     name: "cvRhuZicvV",
     tax: 79,
   },
-  userQuote: 54865.5,
+  userQuote: "54865.50",
 };
 
 describe("QuoteService", () => {
