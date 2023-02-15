@@ -1,10 +1,10 @@
+import { IUserService } from "./../../services/user.service.interface";
 import { IUserController } from "./../user.controller.interface";
 import { Request, Response } from "express";
-import { UserService } from "../../services/details/user.service";
 import { ErrorHandler } from "../../../error-handler/error.handler";
 
 export class UserController implements IUserController {
-  constructor(private readonly userService: UserService) {}
+  constructor(private readonly userService: IUserService) {}
 
   async findAll(req: Request, res: Response) {
     try {
