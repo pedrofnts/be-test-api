@@ -1,7 +1,6 @@
 import { IQuoteService } from "./../../services/quote.service.interface";
 import { Request, Response } from "express";
 import { ErrorHandler } from "../../../error-handler/error.handler";
-import { QuoteService } from "../../services/details/quote.service";
 import { IQuoteController } from "../quote.controller.interface";
 
 export class QuoteController implements IQuoteController {
