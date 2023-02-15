@@ -23,7 +23,7 @@ export class QuoteService implements IQuoteService {
 
     const productsTotalValue = productValues.reduce((a, b) => a + b);
 
-    const userQuote = productsTotalValue * userTax;
+    const userQuote = (productsTotalValue * userTax).toFixed(2);
 
     return { user, userQuote };
   }
