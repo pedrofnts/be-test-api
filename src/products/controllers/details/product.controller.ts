@@ -1,10 +1,11 @@
 import { Request, Response } from "express";
 import { ErrorHandler } from "../../../error-handler/error.handler";
 import { ProductService } from "../../services/details/product.service";
+import { IProductService } from "../../services/product.service.interface";
 import { IProductController } from "../product.controller.interface";
 
 export class ProductController implements IProductController {
-  constructor(private readonly ProductService: ProductService) {}
+  constructor(private readonly ProductService: IProductService) {}
 
   async findAll(req: Request, res: Response) {
     try {
