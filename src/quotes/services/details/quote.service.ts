@@ -1,14 +1,17 @@
+import { IUserService } from "./../../../users/services/user.service.interface";
 import { IQuoteService } from "../quote.service.interface";
 import { ProductService } from "../../../products/services/details/product.service";
 import { UserService } from "../../../users/services/details/user.service";
+import { IQuote } from "../../models/quote.interface";
+import { IProductService } from "../../../products/services/product.service.interface";
 
 export class QuoteService implements IQuoteService {
   constructor(
-    private readonly productService: ProductService,
-    private readonly usersService: UserService
+    private readonly productService: IProductService,
+    private readonly usersService: IUserService
   ) {}
 
-  async createQuote(userId: number, productsId: number[]) {
+  async createQuote(userId: number, productsId: number[]): Promise<IQuote> {
     const user = await this.usersService.findById(userId);
 
     const userTax = user.tax / 100;
